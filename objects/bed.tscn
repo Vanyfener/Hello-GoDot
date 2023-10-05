@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://xc6f5r6s4yvc"]
+
+[ext_resource type="Texture2D" uid="uid://bkm35coklb41r" path="res://assets/graphics/objects/bed.png" id="1_egx2h"]
+[ext_resource type="Texture2D" uid="uid://bwn8qxd366vqa" path="res://assets/graphics/objects/pillow_small.png" id="2_31gpj"]
+[ext_resource type="Texture2D" uid="uid://b3kmdjxkaedpw" path="res://assets/graphics/objects/pillow_large.png" id="3_3fbr2"]
+[ext_resource type="Texture2D" uid="uid://dbtb46sos3dwm" path="res://assets/graphics/objects/Box.png" id="4_pv58f"]
+[ext_resource type="Texture2D" uid="uid://qlo31s4t02mv" path="res://assets/graphics/objects/light.png" id="5_l5sg1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v5rgf"]
+size = Vector2(632, 368)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yllg2"]
+size = Vector2(145, 162)
+
+[node name="Bed" type="StaticBody2D"]
+
+[node name="Bed" type="Sprite2D" parent="."]
+texture = ExtResource("1_egx2h")
+
+[node name="PillowSmall" type="Sprite2D" parent="Bed"]
+position = Vector2(242, -90)
+rotation = -0.09317
+scale = Vector2(1.48292, 0.638559)
+skew = -0.0593412
+texture = ExtResource("2_31gpj")
+
+[node name="PillowLarge" type="Sprite2D" parent="Bed"]
+position = Vector2(246, 66)
+rotation = 0.30329
+scale = Vector2(0.92963, 0.87037)
+skew = -0.0890118
+texture = ExtResource("3_3fbr2")
+
+[node name="BadSide" type="Sprite2D" parent="Bed"]
+position = Vector2(246.019, -268.004)
+rotation = 1.57554
+scale = Vector2(0.458542, 0.573456)
+texture = ExtResource("4_pv58f")
+
+[node name="ReadingLight" type="Sprite2D" parent="Bed/BadSide"]
+position = Vector2(-0.899902, -32.6009)
+rotation = -0.0535552
+scale = Vector2(0.75337, 2.00655)
+skew = 0.00263369
+texture = ExtResource("5_l5sg1")
+
+[node name="Base" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_v5rgf")
+
+[node name="BadSide" type="CollisionShape2D" parent="."]
+position = Vector2(245.5, -268)
+shape = SubResource("RectangleShape2D_yllg2")

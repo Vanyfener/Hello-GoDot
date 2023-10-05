@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhrc1k35l564x"]
+
+[ext_resource type="Texture2D" uid="uid://bpkml1ul80du6" path="res://assets/graphics/objects/box/base.png" id="1_fcfak"]
+[ext_resource type="Texture2D" uid="uid://cav2n8hq32xxr" path="res://assets/graphics/objects/box/lid.png" id="2_1m42t"]
+
+[node name="Box" type="StaticBody2D"]
+
+[node name="Base" type="Sprite2D" parent="."]
+texture = ExtResource("1_fcfak")
+
+[node name="Lid" type="Sprite2D" parent="."]
+position = Vector2(0, -20)
+texture = ExtResource("2_1m42t")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-194, 91, -202, 81, -202, -74, -185, -89, 182, -89, 202, -71, 203, 79, 191, 92)
