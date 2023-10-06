@@ -1,7 +1,8 @@
-[gd_scene load_steps=33 format=3 uid="uid://boayl2rumytwa"]
+[gd_scene load_steps=34 format=3 uid="uid://boayl2rumytwa"]
 
 [ext_resource type="Texture2D" uid="uid://tolka663brsb" path="res://assets/graphics/tilesets/interior.png" id="1_c5u1f"]
 [ext_resource type="PackedScene" uid="uid://cducmdmp8f8sb" path="res://objects/simple_light.tscn" id="2_dpd4u"]
+[ext_resource type="PackedScene" uid="uid://cg7fasmid2fdd" path="res://objects/light_fan_animation.tscn" id="3_um56v"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_jgekg"]
 polygon = PackedVector2Array(195, -23.3345, 195, 20.5061, -195, 22.6274, -195, -22.6274)
@@ -355,3 +356,11 @@ metadata/_edit_lock_ = true
 position = Vector2(1273, -391)
 rotation = 7.85397
 metadata/_edit_lock_ = true
+
+[node name="LightFanAnimation" parent="." instance=ExtResource("3_um56v")]
+position = Vector2(586, -390)
+frame_progress = 0.637947
+
+[node name="LightFanAnimation2" parent="." instance=ExtResource("3_um56v")]
+position = Vector2(-584, -390)
+frame_progress = 0.666889

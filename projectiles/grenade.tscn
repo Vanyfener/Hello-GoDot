@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dm5ow6mseirs1"]
+[gd_scene load_steps=9 format=3 uid="uid://dm5ow6mseirs1"]
 
 [ext_resource type="Script" path="res://projectiles/grenade.gd" id="1_cevl2"]
 [ext_resource type="Texture2D" uid="uid://b2yjufbj6mxt0" path="res://assets/graphics/projectiles/grenade.png" id="1_hm4lm"]
+[ext_resource type="Texture2D" uid="uid://c31ylsl7i0ib4" path="res://assets/graphics/explosions/explosion_3.png" id="3_6whd7"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3q4d0"]
 bounce = 1.0
@@ -9,8 +10,57 @@ bounce = 1.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_thsl2"]
 radius = 16.4441
 
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ghtac"]
-polygon = PackedVector2Array(-23, 6, -24, 0, -22, -10, -17, -17, -10, -22, -5, -24, 3, -24, 10, -22, 14, -19, 18, -15, 22, -10, 24, -2, 23, 5, 21, 12, 18, 16, 14, 20, 8, 23, 0, 24, -9, 22, -15, 18, -19, 14)
+[sub_resource type="Animation" id="Animation_ixflc"]
+resource_name = "ExplosionSlideShow"
+length = 0.72
+step = 0.04
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.04, 0.08, 0.12, 0.16, 0.2, 0.24, 0.28, 0.32, 0.36, 0.4, 0.44, 0.48, 0.52, 0.56, 0.6, 0.64),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.72),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_01sbi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lkn1t"]
+_data = {
+"ExplosionSlideShow": SubResource("Animation_ixflc"),
+"RESET": SubResource("Animation_01sbi")
+}
 
 [node name="Grenade" type="RigidBody2D"]
 collision_layer = 4
@@ -28,5 +78,14 @@ texture = ExtResource("1_hm4lm")
 scale = Vector2(1.4, 1.4)
 shape = SubResource("CircleShape2D_thsl2")
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
-occluder = SubResource("OccluderPolygon2D_ghtac")
+[node name="Explosion" type="Sprite2D" parent="."]
+texture = ExtResource("3_6whd7")
+hframes = 8
+vframes = 8
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Explosion")
+autoplay = "ExplosionSlideShow"
+libraries = {
+"": SubResource("AnimationLibrary_lkn1t")
+}

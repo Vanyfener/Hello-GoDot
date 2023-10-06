@@ -14,7 +14,6 @@ gradient = SubResource("Gradient_n287u")
 emission_shape = 1
 emission_sphere_radius = 14.0
 particle_flag_disable_z = true
-direction = Vector3(1, -90, 0)
 spread = 15.0
 gravity = Vector3(0, 0, 0)
 initial_velocity_min = 40.0
@@ -42,11 +41,12 @@ collision_mask = 31
 script = ExtResource("1_k5qgk")
 
 [node name="Player" type="Sprite2D" parent="."]
-position = Vector2(0, -35)
+position = Vector2(35, 2)
+rotation = 1.5708
 texture = ExtResource("2_rk4lr")
 
 [node name="GunSmoke" type="GPUParticles2D" parent="."]
-position = Vector2(19, -129)
+position = Vector2(118, 19)
 emitting = false
 amount = 16
 process_material = SubResource("ParticleProcessMaterial_ewc1s")
@@ -70,20 +70,21 @@ wait_time = 3.0
 [node name="LaserStartPositions" type="Node2D" parent="."]
 
 [node name="Marker2D" type="Marker2D" parent="LaserStartPositions"]
-position = Vector2(20, -89)
+position = Vector2(105, 18)
 
 [node name="Marker2D2" type="Marker2D" parent="LaserStartPositions"]
-position = Vector2(8, -84)
+position = Vector2(96, 3)
 
 [node name="Marker2D3" type="Marker2D" parent="LaserStartPositions"]
-position = Vector2(33, -84)
+position = Vector2(96, 35)
 
 [node name="GrenadeStartPositions" type="Node2D" parent="."]
 
 [node name="Marker2D" type="Marker2D" parent="GrenadeStartPositions"]
-position = Vector2(20, -67)
+position = Vector2(79, 17)
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+rotation = 1.5708
 occluder = SubResource("OccluderPolygon2D_rl63l")
 
 [connection signal="timeout" from="PrimaryDelay" to="." method="_on_primary_delay_timeout"]
