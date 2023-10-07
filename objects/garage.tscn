@@ -293,7 +293,7 @@ sources/0 = SubResource("TileSetAtlasSource_auft8")
 
 [node name="Garage" type="Area2D"]
 collision_layer = 8
-collision_mask = 15
+collision_mask = 7
 
 [node name="GarageCollision" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-1439, -1199, -1438, 1193, -1422, 1282, -1368, 1366, -1284, 1419, -1190, 1438, 1194, 1438, 1299, 1413, 1385, 1349, 1431, 1264, 1438, 1168, 1439, -1188, 1419, -1286, 1371, -1363, 1281, -1424, 1184, -1438, -1205, -1437, -1293, -1416, -1372, -1358, -1419, -1282)

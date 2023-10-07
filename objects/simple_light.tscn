@@ -12,7 +12,7 @@ polygon = PackedVector2Array(-79, 16, -90, 14, -99, 6, -99, -5, -92, -15, -78, -
 
 [node name="SimpleLight" type="StaticBody2D"]
 collision_layer = 8
-collision_mask = 0
+collision_mask = 7
 
 [node name="LightCollision" type="CollisionShape2D" parent="."]
 rotation = 1.5708

@@ -3,8 +3,10 @@ extends Node2D
 var laser_scene: PackedScene = preload("res://projectiles/laser.tscn")
 var grenade_scene: PackedScene = preload("res://projectiles/grenade.tscn")
 
-func _on_gate_player_entered_inside():
-	print("entered inside a level")
+func _on_gate_player_entered_inside(body):
+	var format_string = "entered inside a level, "
+	print(format_string)
+	print(body)
 	
 func _on_player_laser(pos, dir):
 	var laser = laser_scene.instantiate() as Area2D

@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://dm5ow6mseirs1"]
+[gd_scene load_steps=11 format=3 uid="uid://dm5ow6mseirs1"]
 
 [ext_resource type="Script" path="res://projectiles/grenade.gd" id="1_cevl2"]
 [ext_resource type="Texture2D" uid="uid://b2yjufbj6mxt0" path="res://assets/graphics/projectiles/grenade.png" id="1_hm4lm"]
 [ext_resource type="Texture2D" uid="uid://c31ylsl7i0ib4" path="res://assets/graphics/explosions/explosion_3.png" id="3_6whd7"]
+[ext_resource type="Texture2D" uid="uid://4qndsixtpr2q" path="res://assets/graphics/lights/textures/circle.png" id="4_j8qyb"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3q4d0"]
 bounce = 1.0
@@ -12,8 +13,7 @@ radius = 16.4441
 
 [sub_resource type="Animation" id="Animation_ixflc"]
 resource_name = "ExplosionSlideShow"
-length = 0.72
-step = 0.04
+step = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -21,10 +21,10 @@ tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.04, 0.08, 0.12, 0.16, 0.2, 0.24, 0.28, 0.32, 0.36, 0.4, 0.44, 0.48, 0.52, 0.56, 0.6, 0.64),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.04, 0.08, 0.12, 0.16, 0.2, 0.24, 0.28, 0.32, 0.36, 0.4, 0.44, 0.48, 0.52, 0.56, 0.6, 0.6001, 0.64),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+"values": [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 16, 17]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
@@ -33,12 +33,24 @@ tracks/1/path = NodePath("..")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.72),
+"times": PackedFloat32Array(1),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
 "method": &"queue_free"
 }]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.705882), Color(1, 1, 1, 0.376471), Color(1, 1, 1, 0.0313726)]
 }
 
 [sub_resource type="Animation" id="Animation_01sbi"]
@@ -55,11 +67,115 @@ tracks/0/keys = {
 "update": 1,
 "values": [0]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Blinking:energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [16.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.705882)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../GrenadeImage:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Blinking:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_7a7ov"]
+resource_name = "blinking"
+length = 2.0
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Blinking:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 1.65, 1.8, 1.95),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [16.0, 0.0, 16.0, 0.0, 16.0, 0.0, 16.0]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"explode"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../GrenadeImage:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Blinking:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lkn1t"]
 _data = {
 "ExplosionSlideShow": SubResource("Animation_ixflc"),
-"RESET": SubResource("Animation_01sbi")
+"RESET": SubResource("Animation_01sbi"),
+"blinking": SubResource("Animation_7a7ov")
 }
 
 [node name="Grenade" type="RigidBody2D"]
@@ -71,6 +187,7 @@ linear_damp = 2.0
 script = ExtResource("1_cevl2")
 
 [node name="GrenadeImage" type="Sprite2D" parent="."]
+visible = false
 scale = Vector2(0.295, 0.295)
 texture = ExtResource("1_hm4lm")
 
@@ -79,13 +196,20 @@ scale = Vector2(1.4, 1.4)
 shape = SubResource("CircleShape2D_thsl2")
 
 [node name="Explosion" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.705882)
 texture = ExtResource("3_6whd7")
 hframes = 8
 vframes = 8
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="Blinking" type="PointLight2D" parent="."]
+color = Color(0.8, 0.0588235, 0.105882, 1)
+energy = 16.0
+texture = ExtResource("4_j8qyb")
+texture_scale = 0.04
+
+[node name="ExplosionAnimation" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Explosion")
-autoplay = "ExplosionSlideShow"
+autoplay = "blinking"
 libraries = {
 "": SubResource("AnimationLibrary_lkn1t")
 }
