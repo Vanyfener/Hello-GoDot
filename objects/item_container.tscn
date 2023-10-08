@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://djl1hxnpj7cl8"]
+
+[ext_resource type="Texture2D" uid="uid://dbtb46sos3dwm" path="res://assets/graphics/objects/Box.png" id="1_oxywb"]
+[ext_resource type="Script" path="res://objects/item_container.gd" id="1_v6lr6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l0gri"]
+size = Vector2(357, 258)
+
+[node name="ItemContainer" type="StaticBody2D"]
+collision_layer = 8
+collision_mask = 15
+script = ExtResource("1_v6lr6")
+
+[node name="ContainerImage" type="Sprite2D" parent="."]
+texture = ExtResource("1_oxywb")
+
+[node name="ContainerCollision" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 2)
+shape = SubResource("RectangleShape2D_l0gri")

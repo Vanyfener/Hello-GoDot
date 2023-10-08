@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+#var is_anemy : bool = true
+
 const SPEED = 300.0
 
 var direction: Vector2
@@ -9,3 +11,7 @@ func _physics_process(_delta):
 	velocity = direction * SPEED
 	
 	move_and_slide()
+
+
+func hit():
+	print("damage")

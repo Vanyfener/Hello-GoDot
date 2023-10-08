@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://projectiles/grenade.gd" id="1_cevl2"]
 [ext_resource type="Texture2D" uid="uid://b2yjufbj6mxt0" path="res://assets/graphics/projectiles/grenade.png" id="1_hm4lm"]
-[ext_resource type="Texture2D" uid="uid://c31ylsl7i0ib4" path="res://assets/graphics/explosions/explosion_3.png" id="3_6whd7"]
+[ext_resource type="Texture2D" uid="uid://wj27ljihokvs" path="res://assets/graphics/explosions/explosion_2.png" id="3_ohapa"]
 [ext_resource type="Texture2D" uid="uid://4qndsixtpr2q" path="res://assets/graphics/lights/textures/circle.png" id="4_j8qyb"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3q4d0"]
@@ -197,7 +197,8 @@ shape = SubResource("CircleShape2D_thsl2")
 
 [node name="Explosion" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.705882)
-texture = ExtResource("3_6whd7")
+scale = Vector2(4, 4)
+texture = ExtResource("3_ohapa")
 hframes = 8
 vframes = 8
 

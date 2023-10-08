@@ -1,16 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://bhrc1k35l564x"]
+[gd_scene load_steps=6 format=3 uid="uid://bhrc1k35l564x"]
 
-[ext_resource type="Texture2D" uid="uid://bpkml1ul80du6" path="res://assets/graphics/objects/box/base.png" id="1_fcfak"]
-[ext_resource type="Texture2D" uid="uid://cav2n8hq32xxr" path="res://assets/graphics/objects/box/lid.png" id="2_1m42t"]
+[ext_resource type="PackedScene" uid="uid://djl1hxnpj7cl8" path="res://objects/item_container.tscn" id="1_x17j4"]
+[ext_resource type="Script" path="res://objects/box.gd" id="2_c7a06"]
+[ext_resource type="Texture2D" uid="uid://bpkml1ul80du6" path="res://assets/graphics/objects/box/base.png" id="2_fip06"]
+[ext_resource type="Texture2D" uid="uid://cav2n8hq32xxr" path="res://assets/graphics/objects/box/lid.png" id="3_h2elh"]
 
-[node name="Box" type="StaticBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ogyap"]
+size = Vector2(180, 404)
 
-[node name="Base" type="Sprite2D" parent="."]
-texture = ExtResource("1_fcfak")
+[node name="Box" instance=ExtResource("1_x17j4")]
+script = ExtResource("2_c7a06")
 
-[node name="Lid" type="Sprite2D" parent="."]
-position = Vector2(0, -20)
-texture = ExtResource("2_1m42t")
+[node name="LidStand" type="Sprite2D" parent="." index="0"]
+position = Vector2(-1, 1)
+texture = ExtResource("2_fip06")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-194, 91, -202, 81, -202, -74, -185, -89, 182, -89, 202, -71, 203, 79, 191, 92)
+[node name="ContainerImage" parent="." index="1"]
+position = Vector2(-1, -24)
+texture = ExtResource("3_h2elh")
+
+[node name="ContainerCollision" parent="." index="2"]
+position = Vector2(-1, 2)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_ogyap")

@@ -37,7 +37,7 @@ color_ramp = SubResource("GradientTexture1D_1tkn6")
 polygon = PackedVector2Array(-49, 38, -43, 50, -37, 54, -31, 55, -24, 61, -16, 62, -7, 62, 7, 61, 13, 58, 15, 53, 18, 52, 20, 55, 28, 52, 32, 48, 34, 45, 41, 43, 46, 39, 52, 38, 58, 33, 61, 26, 61, 8, 59, 5, 57, -5, 53, -14, 48, -22, 43, -38, 40, -41, 41, -44, 41, -58, 45, -56, 50, -57, 53, -60, 53, -92, 50, -95, 44, -95, 42, -101, 35, -107, 35, -109, 37, -110, 37, -121, 33, -121, 31, -120, 31, -122, 33, -123, 33, -127, 29, -131, 12, -131, 7, -128, 7, -124, 9, -122, 9, -120, 7, -120, 5, -123, 2, -122, 1, -110, -2, -108, -4, -105, -5, -94, -10, -89, -12, -84, -11, -77, -11, -74, -27, -58, -30, -52, -30, -47, -38, -42, -42, -42, -51, -33, -60, -26, -63, -20, -60, -12, -59, -10, -60, 0, -59, 7, -57, 13, -57, 19, -53, 29, -49, 33)
 
 [node name="Player" type="CharacterBody2D"]
-collision_mask = 31
+collision_mask = 63
 script = ExtResource("1_k5qgk")
 
 [node name="Player" type="Sprite2D" parent="."]
@@ -70,18 +70,18 @@ wait_time = 3.0
 [node name="LaserStartPositions" type="Node2D" parent="."]
 
 [node name="Marker2D" type="Marker2D" parent="LaserStartPositions"]
-position = Vector2(105, 18)
+position = Vector2(126, 21)
 
 [node name="Marker2D2" type="Marker2D" parent="LaserStartPositions"]
-position = Vector2(96, 3)
+position = Vector2(121, 11)
 
 [node name="Marker2D3" type="Marker2D" parent="LaserStartPositions"]
-position = Vector2(96, 35)
+position = Vector2(121, 32)
 
 [node name="GrenadeStartPositions" type="Node2D" parent="."]
 
 [node name="Marker2D" type="Marker2D" parent="GrenadeStartPositions"]
-position = Vector2(79, 17)
+position = Vector2(106, 21)
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 rotation = 1.5708

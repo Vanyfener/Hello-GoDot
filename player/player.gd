@@ -3,8 +3,8 @@ extends CharacterBody2D
 signal laser(pos, dir)
 signal grenade(pos, dir)
 
-const SPEED = 600
-const ROTATION_SPEED = 10
+@export var player_speed: int = 600
+@export var player_rotation_speed: float = 10
 
 var primary_delay: bool = true
 var secondary_delay: bool = true
@@ -13,15 +13,15 @@ func _process(delta):
 	#movement
 	var direction = Input.get_vector("left", "right", "up", "down")
 	if direction:
-		velocity = direction * SPEED
+		velocity = direction * player_speed
 	else:
-		velocity.x = lerp(velocity.x, direction.x * SPEED, delta * 8.0)
-		velocity.y = lerp(velocity.y, direction.x * SPEED, delta * 8.0)
+		velocity.x = lerp(velocity.x, direction.x * player_speed, delta * 8.0)
+		velocity.y = lerp(velocity.y, direction.x * player_speed, delta * 8.0)
 	
 	move_and_slide()
 	
 	#rotation
-	rotation = get_smooth_mouse_rotation(delta, ROTATION_SPEED)
+	rotation = get_smooth_mouse_rotation(delta, player_rotation_speed)
 	
 	#Left/Right mouse click
 	var player_direction = (get_global_mouse_position() - position).normalized()

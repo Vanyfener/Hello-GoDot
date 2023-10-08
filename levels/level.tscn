@@ -1,160 +1,12 @@
-[gd_scene load_steps=18 format=3 uid="uid://b430y3kk4qq8v"]
+[gd_scene load_steps=3 format=3 uid="uid://b430y3kk4qq8v"]
 
 [ext_resource type="Script" path="res://levels/level.gd" id="1_pw3if"]
-[ext_resource type="Texture2D" uid="uid://bjtofko0blnki" path="res://assets/graphics/ground/stones.png" id="2_23egq"]
-[ext_resource type="Texture2D" uid="uid://b6bhj52lxtb4a" path="res://assets/graphics/tilesets/outside_walls.png" id="3_7hrx5"]
-[ext_resource type="PackedScene" uid="uid://bke76ljm4ho7j" path="res://objects/gate.tscn" id="3_8hvgq"]
 [ext_resource type="PackedScene" uid="uid://eps3ct157fve" path="res://player/player.tscn" id="3_yqite"]
-[ext_resource type="Texture2D" uid="uid://bf2reed0f2a4l" path="res://assets/graphics/tilesets/soil.png" id="4_alidc"]
-[ext_resource type="PackedScene" uid="uid://boayl2rumytwa" path="res://objects/garage.tscn" id="5_vyp2d"]
-[ext_resource type="Texture2D" uid="uid://xpafs4voy4bn" path="res://assets/graphics/decals/moss/moss_4.png" id="7_q7mo3"]
-[ext_resource type="Texture2D" uid="uid://soxm84ddrbn5" path="res://assets/graphics/decals/moss/moss_1.png" id="8_wojr3"]
-[ext_resource type="Texture2D" uid="uid://0oibexgb7gru" path="res://assets/graphics/decals/moss/moss_2.png" id="9_ts245"]
-[ext_resource type="Texture2D" uid="uid://v5sg4eq8rrh8" path="res://assets/graphics/decals/moss/moss_3.png" id="10_44d6k"]
-[ext_resource type="PackedScene" uid="uid://dm5ax2kwnfqv8" path="res://objects/steam_vent.tscn" id="11_0e16q"]
-[ext_resource type="Texture2D" uid="uid://ek1ycxnktbs2" path="res://assets/graphics/decals/moss/moss_5.png" id="11_163tp"]
-[ext_resource type="Texture2D" uid="uid://couistjykrq7e" path="res://assets/graphics/decals/dirt_patch.png" id="12_q278h"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r0ret"]
-texture = ExtResource("3_7hrx5")
-texture_region_size = Vector2i(390, 390)
-0:0/0 = 0
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-68, -63, 195, -58, 195, 60, -64, 61)
-1:0/0 = 0
-1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:0/0/physics_layer_0/angular_velocity = 0.0
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-195, -58, 195, -58, 195, 60, -195, 62)
-2:0/0 = 0
-2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:0/0/physics_layer_0/angular_velocity = 0.0
-2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(68, 63, -195, 58, -195, -60, 64, -61)
-0:1/0 = 0
-0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:1/0/physics_layer_0/angular_velocity = 0.0
-0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(63, -68, 58, 195, -60, 195, -61, -64)
-1:1/0 = 0
-1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:1/0/physics_layer_0/angular_velocity = 0.0
-1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-60.5, -65, 195, -66, 195, 60, 61.5, 58, 59.5, 195, -61.5, 195)
-2:1/0 = 0
-2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:1/0/physics_layer_0/angular_velocity = 0.0
-2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(65, -60.5, 66, 195, -60, 195, -58, 61.5, -195, 59.5, -195, -61.5)
-0:2/0 = 0
-0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:2/0/physics_layer_0/angular_velocity = 0.0
-0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(58, -195, 58, 195, -60, 195, -62, -195)
-1:2/0 = 0
-1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:2/0/physics_layer_0/angular_velocity = 0.0
-1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-65, 60.5, -66, -195, 60, -195, 58, -61.5, 195, -59.5, 195, 61.5)
-2:2/0 = 0
-2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:2/0/physics_layer_0/angular_velocity = 0.0
-2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(60.5, 65, -195, 66, -195, -60, -61.5, -58, -59.5, -195, 61.5, -195)
-0:3/0 = 0
-0:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:3/0/physics_layer_0/angular_velocity = 0.0
-0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-63, 68, -58, -195, 60, -195, 61, 64)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r5ko8"]
-texture = ExtResource("4_alidc")
-texture_region_size = Vector2i(390, 390)
-0:0/0 = 0
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/angular_velocity = 0.0
-1:0/0 = 0
-1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:0/0/physics_layer_0/angular_velocity = 0.0
-2:0/0 = 0
-2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:0/0/physics_layer_0/angular_velocity = 0.0
-0:1/0 = 0
-0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:1/0/physics_layer_0/angular_velocity = 0.0
-1:1/0 = 0
-1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:1/0/physics_layer_0/angular_velocity = 0.0
-2:1/0 = 0
-2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:1/0/physics_layer_0/angular_velocity = 0.0
-0:2/0 = 0
-0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:2/0/physics_layer_0/angular_velocity = 0.0
-1:2/0 = 0
-1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:2/0/physics_layer_0/angular_velocity = 0.0
-2:2/0 = 0
-2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-2:2/0/physics_layer_0/angular_velocity = 0.0
-
-[sub_resource type="TileSet" id="TileSet_ijtva"]
-tile_size = Vector2i(390, 390)
-physics_layer_0/collision_layer = 8
-physics_layer_0/collision_mask = 15
-sources/1 = SubResource("TileSetAtlasSource_r0ret")
-sources/2 = SubResource("TileSetAtlasSource_r5ko8")
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_pw3if")
 
 [node name="Ground" type="Node2D" parent="."]
-
-[node name="GroundBrick" type="Sprite2D" parent="Ground"]
-texture_repeat = 2
-texture = ExtResource("2_23egq")
-region_enabled = true
-region_rect = Rect2(0, 0, 15000, 15000)
-
-[node name="TileMap" type="TileMap" parent="Ground"]
-tile_set = SubResource("TileSet_ijtva")
-format = 2
-layer_0/name = "Soil"
-layer_0/tile_data = PackedInt32Array(65533, 65538, 1, 131069, 65538, 1, 196605, 65538, 1, 262141, 65538, 1, 327677, 65538, 1, 393213, 65538, 1, 65534, 65538, 1, 131070, 65538, 1, 196606, 65538, 1, 262142, 65538, 1, 327678, 65538, 1, 393214, 65538, 1, 65535, 65538, 1, 131071, 65538, 1, 196607, 65538, 1, 262143, 65538, 1, 327679, 65538, 1, 393215, 65538, 1, 0, 65538, 1, 65536, 65538, 1, 131072, 65538, 1, 196608, 65538, 1, 262144, 65538, 1, 327680, 65538, 1, 1, 65538, 1, 65537, 65538, 1, 131073, 65538, 1, 196609, 65538, 1, 262145, 65538, 1, 327681, 65538, 1, 2, 65538, 1, 65538, 65538, 1, 131074, 65538, 1, 196610, 65538, 1, 262146, 65538, 1, 327682, 65538, 1, 3, 65538, 1, 65539, 65538, 1, 131075, 65538, 1, 196611, 65538, 1, 262147, 65538, 1, 327683, 65538, 1, -3, 65538, 0, -2, 65538, 0, -1, 65538, 0, -65536, 65538, 0, -65535, 65538, 0, -65534, 65538, 0, -65533, 65538, 0, 4, 131074, 1, 65540, 131074, 1, 131076, 131074, 1, 196612, 131074, 1, 262148, 131074, 1, 327684, 131074, 1, 393219, 65538, 2, 393218, 65538, 2, 393217, 65538, 2, 393216, 65538, 2, 458751, 65538, 2, 458750, 65538, 2, 393212, 2, 1, 327676, 2, 1, 262140, 2, 1, 196604, 2, 1, 131068, 2, 1, 65532, 2, 1, -4, 2, 0, 393220, 131074, 2, -65532, 131074, 0, 458748, 2, 2, 458749, 65538, 2)
-layer_1/name = "Walls"
-layer_1/enabled = true
-layer_1/modulate = Color(1, 1, 1, 1)
-layer_1/y_sort_enabled = false
-layer_1/y_sort_origin = 0
-layer_1/z_index = 0
-layer_1/tile_data = PackedInt32Array(-131076, 65537, 0, -196605, 65537, 0, -196604, 65537, 0, -131077, 65537, 0, -196603, 65537, 0, -131078, 65537, 0, -196602, 65537, 0, -131079, 65537, 0, -196601, 131073, 1, -131080, 65537, 1, -65544, 1, 2, -8, 1, 2, 65528, 1, 2, 131064, 1, 2, 196600, 1, 2, 262136, 1, 3, -131065, 1, 2, -65529, 1, 2, 7, 1, 2, 65543, 1, 2, 131079, 1, 2, 196615, 1, 2, 262151, 1, 2, 327687, 1, 2, 393223, 131073, 2, 393222, 65537, 0, 393221, 65537, 0, 393220, 65537, 0, 393219, 65537, 0, 393218, 65537, 0, 393217, 65537, 0, 393216, 65537, 0, 458751, 65537, 0, 458750, 65537, 0, 458749, 65537, 0, 458748, 65537, 0, 458747, 1, 0)
-
-[node name="Garage" parent="Ground/TileMap" instance=ExtResource("5_vyp2d")]
-position = Vector2(-3686, 2770)
-rotation = -0.772703
-
-[node name="Moss4" type="Sprite2D" parent="Ground"]
-position = Vector2(-1148, 1974)
-texture = ExtResource("7_q7mo3")
-
-[node name="Moss1" type="Sprite2D" parent="Ground"]
-position = Vector2(782, 1079)
-texture = ExtResource("8_wojr3")
-
-[node name="Moss2" type="Sprite2D" parent="Ground"]
-position = Vector2(-608, 611)
-texture = ExtResource("9_ts245")
-
-[node name="Moss3" type="Sprite2D" parent="Ground"]
-position = Vector2(782, 1819)
-texture = ExtResource("10_44d6k")
-
-[node name="Moss5" type="Sprite2D" parent="Ground"]
-position = Vector2(967, 264)
-texture = ExtResource("11_163tp")
-
-[node name="DirtPatch" type="Sprite2D" parent="Ground"]
-modulate = Color(0.486275, 0.478431, 0.478431, 1)
-position = Vector2(-109, 1314)
-texture = ExtResource("12_q278h")
-
-[node name="SteamVent" parent="." instance=ExtResource("11_0e16q")]
-position = Vector2(-2206, -399)
-
-[node name="Gate" parent="." instance=ExtResource("3_8hvgq")]
-position = Vector2(0, -1000)
 
 [node name="Projectiles" type="Node2D" parent="."]
 
@@ -163,10 +15,9 @@ position = Vector2(0, 600)
 rotation = -1.5708
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(0.4, 0.4)
+zoom = Vector2(0.3, 0.3)
 position_smoothing_enabled = true
 position_smoothing_speed = 8.0
 
-[connection signal="player_entered_inside" from="Gate" to="." method="_on_gate_player_entered_inside"]
 [connection signal="grenade" from="Player" to="." method="_on_player_grenade"]
 [connection signal="laser" from="Player" to="." method="_on_player_laser"]
