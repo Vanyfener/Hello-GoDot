@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://dnejn0qmknrtw"]
+
+[ext_resource type="FontFile" uid="uid://4xwn0qnt103c" path="res://assets/graphics/ui/subatomic.tsoonami.ttf" id="1_482hk"]
+
+[resource]
+line_spacing = 2.0
+font = ExtResource("1_482hk")
+font_size = 13
