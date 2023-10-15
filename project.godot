@@ -14,6 +14,10 @@ config/name="Hello World"
 run/main_scene="res://levels/inside.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 
+[autoload]
+
+Globals="*res://globals/globals.gd"
+
 [input]
 
 left={

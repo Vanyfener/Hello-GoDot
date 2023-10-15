@@ -25,7 +25,8 @@ func _process(delta):
 	
 	#Left/Right mouse click
 	var player_direction = (get_global_mouse_position() - position).normalized()
-	if Input.is_action_pressed("primary action") && primary_delay:
+	if Input.is_action_pressed("primary action") && primary_delay && Globals.laser_ammo_amount > 0:
+		Globals.laser_ammo_amount -= 1
 		var laser_markers = $LaserStartPositions.get_children()
 		var random_laser_selection = laser_markers[randi() % laser_markers.size()]
 		direction = player_direction
@@ -34,7 +35,8 @@ func _process(delta):
 		$PrimaryDelay.start()
 		laser.emit(random_laser_selection.global_position, player_direction)
 		
-	if Input.is_action_just_pressed("secondary action") && secondary_delay:
+	if Input.is_action_just_pressed("secondary action") && secondary_delay && Globals.grenade_amount > 0:
+		Globals.grenade_amount -= 1
 		var grenade_throw_point = $GrenadeStartPositions/Marker2D.global_position
 		secondary_delay = false
 		$SecondaryDelay.start()
