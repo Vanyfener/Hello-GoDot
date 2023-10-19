@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://bke76ljm4ho7j" path="res://objects/gate.tscn" id="14_as5cl"]
 [ext_resource type="PackedScene" uid="uid://bhrc1k35l564x" path="res://objects/box.tscn" id="15_67h6s"]
 [ext_resource type="PackedScene" uid="uid://csmq20lhow4hu" path="res://objects/toilet.tscn" id="16_ym55e"]
-[ext_resource type="PackedScene" uid="uid://djl1hxnpj7cl8" path="res://objects/item_container.tscn" id="17_58304"]
+[ext_resource type="PackedScene" uid="uid://csgh73y3pl1e0" path="res://User Interface/level_transition.tscn" id="18_wic5x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r0ret"]
 texture = ExtResource("3_i3btk")
@@ -172,8 +172,6 @@ position = Vector2(-1483, 141)
 rotation = -1.33805
 scale = Vector2(0.6, 0.6)
 
-[node name="ItemContainer" parent="." index="6" instance=ExtResource("17_58304")]
-position = Vector2(-1484, 749)
-rotation = -0.171303
+[node name="LevelTransition" parent="." index="7" instance=ExtResource("18_wic5x")]
 
 [connection signal="player_entered_inside" from="Gate" to="." method="_on_gate_player_entered_inside"]

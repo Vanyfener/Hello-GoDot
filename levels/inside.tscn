@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://1k53eeufe05c"]
+[gd_scene load_steps=17 format=3 uid="uid://1k53eeufe05c"]
 
 [ext_resource type="PackedScene" uid="uid://b430y3kk4qq8v" path="res://levels/level.tscn" id="1_n1m5t"]
 [ext_resource type="Script" path="res://levels/inside.gd" id="2_f1lpq"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://cq2dgocg6pg1" path="res://objects/wall_light.tscn" id="12_ju5th"]
 [ext_resource type="PackedScene" uid="uid://78mbtt0vk2n1" path="res://enemies/drone.tscn" id="13_cbl4y"]
 [ext_resource type="Texture2D" uid="uid://duy8x5lrf15bp" path="res://assets/graphics/items/orb2.png" id="14_ddep1"]
+[ext_resource type="PackedScene" uid="uid://csgh73y3pl1e0" path="res://User Interface/level_transition.tscn" id="16_wgrk7"]
 
 [node name="Inside" instance=ExtResource("1_n1m5t")]
 script = ExtResource("2_f1lpq")
@@ -211,5 +212,7 @@ position = Vector2(134, -7340)
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." index="5"]
 color = Color(0.345098, 0.345098, 0.345098, 1)
 blend_mode = 1
+
+[node name="LevelTransition" parent="." index="7" instance=ExtResource("16_wgrk7")]
 
 [connection signal="player_entered_inside" from="Gate" to="." method="_on_gate_player_entered_inside"]
