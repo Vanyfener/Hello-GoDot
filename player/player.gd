@@ -53,3 +53,12 @@ func get_smooth_mouse_rotation(dlt, rot_speed) -> float:
 	var ang = vec.angle()
 	var rot = global_rotation
 	return lerp_angle(rot, ang, rot_speed * dlt)
+
+
+func add_item(type):
+	if type == "health":
+		Globals.health += 30
+	if type == "laser_ammo":
+		Globals.laser_ammo_amount += 30
+	if type == "grenade_ammo":
+		Globals.grenade_amount += 2

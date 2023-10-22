@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dsfx12lplx0l6"]
+[gd_scene load_steps=22 format=3 uid="uid://dsfx12lplx0l6"]
 
 [ext_resource type="PackedScene" uid="uid://b430y3kk4qq8v" path="res://levels/level.tscn" id="1_4kknm"]
 [ext_resource type="Script" path="res://levels/outside.gd" id="2_2aks5"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://bke76ljm4ho7j" path="res://objects/gate.tscn" id="14_as5cl"]
 [ext_resource type="PackedScene" uid="uid://bhrc1k35l564x" path="res://objects/box.tscn" id="15_67h6s"]
 [ext_resource type="PackedScene" uid="uid://csmq20lhow4hu" path="res://objects/toilet.tscn" id="16_ym55e"]
+[ext_resource type="PackedScene" uid="uid://cy00wx4lnxt8i" path="res://items/item.tscn" id="18_g6r2s"]
 [ext_resource type="PackedScene" uid="uid://csgh73y3pl1e0" path="res://User Interface/level_transition.tscn" id="18_wic5x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r0ret"]
@@ -173,5 +174,8 @@ rotation = -1.33805
 scale = Vector2(0.6, 0.6)
 
 [node name="LevelTransition" parent="." index="7" instance=ExtResource("18_wic5x")]
+
+[node name="Item" parent="." index="8" instance=ExtResource("18_g6r2s")]
+position = Vector2(-740, 275)
 
 [connection signal="player_entered_inside" from="Gate" to="." method="_on_gate_player_entered_inside"]
