@@ -11,15 +11,48 @@ size = Vector2(180, 404)
 [node name="Box" instance=ExtResource("1_x17j4")]
 script = ExtResource("2_c7a06")
 
-[node name="LidStand" type="Sprite2D" parent="." index="0"]
-position = Vector2(-1, 1)
+[node name="BaseImage" parent="." index="0"]
 texture = ExtResource("2_fip06")
+metadata/_edit_lock_ = true
 
-[node name="ContainerImage" parent="." index="1"]
-position = Vector2(-1, -24)
+[node name="LidSprite" parent="." index="1"]
 texture = ExtResource("3_h2elh")
+metadata/_edit_lock_ = true
 
 [node name="ContainerCollision" parent="." index="2"]
 position = Vector2(-1, 2)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_ogyap")
+metadata/_edit_lock_ = true
+
+[node name="Marker2D" type="Marker2D" parent="SpawnPositions" index="0"]
+position = Vector2(-139, -48)
+scale = Vector2(467.985, 62.876)
+
+[node name="Marker2D2" type="Marker2D" parent="SpawnPositions" index="1"]
+position = Vector2(-114, 26)
+scale = Vector2(467.985, 62.876)
+
+[node name="Marker2D3" type="Marker2D" parent="SpawnPositions" index="2"]
+position = Vector2(-72, -20)
+scale = Vector2(467.985, 62.876)
+
+[node name="Marker2D4" type="Marker2D" parent="SpawnPositions" index="3"]
+position = Vector2(14, 28)
+scale = Vector2(467.985, 62.876)
+
+[node name="Marker2D5" type="Marker2D" parent="SpawnPositions" index="4"]
+position = Vector2(101, -29)
+scale = Vector2(467.985, 62.876)
+
+[node name="Marker2D6" type="Marker2D" parent="SpawnPositions" index="5"]
+position = Vector2(132, 9)
+scale = Vector2(467.985, 62.876)
+
+[node name="Marker2D7" type="Marker2D" parent="SpawnPositions" index="6"]
+position = Vector2(-13, -50)
+scale = Vector2(467.985, 62.876)
+
+[node name="Marker2D8" type="Marker2D" parent="SpawnPositions" index="7"]
+position = Vector2(57, -63)
+scale = Vector2(467.985, 62.876)

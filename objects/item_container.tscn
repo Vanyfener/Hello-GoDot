@@ -6,14 +6,18 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l0gri"]
 size = Vector2(357, 258)
 
-[node name="ItemContainer" type="StaticBody2D"]
+[node name="ItemContainer" type="StaticBody2D" groups=["Container"]]
 collision_layer = 8
-collision_mask = 15
+collision_mask = 7
 script = ExtResource("1_v6lr6")
 
-[node name="ContainerImage" type="Sprite2D" parent="."]
+[node name="BaseImage" type="Sprite2D" parent="."]
 texture = ExtResource("1_oxywb")
+
+[node name="LidSprite" type="Sprite2D" parent="."]
 
 [node name="ContainerCollision" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 2)
 shape = SubResource("RectangleShape2D_l0gri")
+
+[node name="SpawnPositions" type="Node2D" parent="."]

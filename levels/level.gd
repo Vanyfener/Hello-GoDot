@@ -4,6 +4,18 @@ class_name LevelParent
 
 var laser_scene: PackedScene = preload("res://projectiles/laser.tscn")
 var grenade_scene: PackedScene = preload("res://projectiles/grenade.tscn")
+var item_scene: PackedScene = preload("res://objects/item_container.tscn")
+
+func _ready():
+	for container in get_tree().get_nodes_in_group("Container"):
+		print(container)
+		container.connect("open", _on_container_opened)
+
+
+func _on_container_opened(pos, _direction):
+	var item = item_scene.instantiate()
+	item.position =	 pos
+	$Items.add_child(item)
 
 
 func _on_player_laser(pos, dir):

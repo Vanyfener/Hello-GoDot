@@ -1,19 +1,48 @@
-[gd_scene load_steps=5 format=3 uid="uid://csmq20lhow4hu"]
+[gd_scene load_steps=6 format=3 uid="uid://csmq20lhow4hu"]
 
 [ext_resource type="PackedScene" uid="uid://djl1hxnpj7cl8" path="res://objects/item_container.tscn" id="1_ry8o7"]
 [ext_resource type="Script" path="res://ItemContainer.gd" id="2_j0odl"]
 [ext_resource type="Texture2D" uid="uid://cmbjpe0xucg32" path="res://assets/graphics/objects/toilet.png" id="3_aj52w"]
+[ext_resource type="Texture2D" uid="uid://sav6f22le1qw" path="res://assets/graphics/objects/lid.png" id="4_n7f6g"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wxixb"]
-radius = 108.0
-height = 250.0
+radius = 102.0
+height = 248.0
 
 [node name="Toilet" instance=ExtResource("1_ry8o7")]
 script = ExtResource("2_j0odl")
 
-[node name="ContainerImage" parent="." index="0"]
+[node name="BaseImage" parent="." index="0"]
 texture = ExtResource("3_aj52w")
 
-[node name="ContainerCollision" parent="." index="1"]
+[node name="LidSprite" parent="." index="1"]
+position = Vector2(0, 30)
+texture = ExtResource("4_n7f6g")
+
+[node name="ContainerCollision" parent="." index="2"]
 position = Vector2(-1, 0)
 shape = SubResource("CapsuleShape2D_wxixb")
+
+[node name="Marker2D" type="Marker2D" parent="SpawnPositions" index="0"]
+position = Vector2(-55, -24)
+
+[node name="Marker2D2" type="Marker2D" parent="SpawnPositions" index="1"]
+position = Vector2(31, 28)
+
+[node name="Marker2D3" type="Marker2D" parent="SpawnPositions" index="2"]
+position = Vector2(57, -36)
+
+[node name="Marker2D4" type="Marker2D" parent="SpawnPositions" index="3"]
+position = Vector2(-53, 42)
+
+[node name="Marker2D5" type="Marker2D" parent="SpawnPositions" index="4"]
+position = Vector2(30, 93)
+
+[node name="Marker2D6" type="Marker2D" parent="SpawnPositions" index="5"]
+position = Vector2(-16, -84)
+
+[node name="Marker2D7" type="Marker2D" parent="SpawnPositions" index="6"]
+position = Vector2(39, -78)
+
+[node name="Marker2D8" type="Marker2D" parent="SpawnPositions" index="7"]
+position = Vector2(-25, 91)
