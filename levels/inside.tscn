@@ -72,129 +72,133 @@ position = Vector2(199, -4880)
 [node name="LightFanAnimation6" parent="Ground" index="7" instance=ExtResource("3_kyhkj")]
 position = Vector2(189, -6048)
 
-[node name="Toilet" parent="Ground" index="8" instance=ExtResource("4_ff7ve")]
-position = Vector2(4258, 1178)
-
-[node name="Toilet2" parent="Ground" index="9" instance=ExtResource("4_ff7ve")]
-position = Vector2(4256, 2294)
-
-[node name="Bed" parent="Ground" index="10" instance=ExtResource("7_ats4h")]
+[node name="Bed" parent="Ground" index="8" instance=ExtResource("7_ats4h")]
 position = Vector2(4860, 1922)
 
-[node name="Bed2" parent="Ground" index="11" instance=ExtResource("7_ats4h")]
+[node name="Bed2" parent="Ground" index="9" instance=ExtResource("7_ats4h")]
 position = Vector2(4833, 3010)
 
-[node name="Box" parent="Ground" index="12" instance=ExtResource("8_bquw6")]
-position = Vector2(4876, 1158)
-
-[node name="Box2" parent="Ground" index="13" instance=ExtResource("8_bquw6")]
-position = Vector2(4878, 2266)
-
-[node name="ItemContainer" parent="Ground" index="14" instance=ExtResource("9_4b1v4")]
-position = Vector2(3309, 3063)
-rotation = 0.0184139
-
-[node name="ItemContainer2" parent="Ground" index="15" instance=ExtResource("9_4b1v4")]
-position = Vector2(3724, 3065)
-rotation = 3.10563
-
-[node name="SteamVent" parent="Ground" index="16" instance=ExtResource("10_q30rd")]
+[node name="SteamVent" parent="Ground" index="10" instance=ExtResource("10_q30rd")]
 position = Vector2(-591, -200)
 
-[node name="SteamVent2" parent="Ground" index="17" instance=ExtResource("10_q30rd")]
+[node name="SteamVent2" parent="Ground" index="11" instance=ExtResource("10_q30rd")]
 position = Vector2(984, -184)
 
-[node name="SteamVent3" parent="Ground" index="18" instance=ExtResource("10_q30rd")]
+[node name="SteamVent3" parent="Ground" index="12" instance=ExtResource("10_q30rd")]
 position = Vector2(984, 1359)
 
-[node name="SteamVent4" parent="Ground" index="19" instance=ExtResource("10_q30rd")]
+[node name="SteamVent4" parent="Ground" index="13" instance=ExtResource("10_q30rd")]
 position = Vector2(-597, 1369)
 
-[node name="SimpleLight" parent="Ground" index="20" instance=ExtResource("11_bmh38")]
+[node name="SimpleLight" parent="Ground" index="14" instance=ExtResource("11_bmh38")]
 position = Vector2(1558, -1259)
 
-[node name="SimpleLight2" parent="Ground" index="21" instance=ExtResource("11_bmh38")]
+[node name="SimpleLight2" parent="Ground" index="15" instance=ExtResource("11_bmh38")]
 position = Vector2(-1178, -1262)
 
-[node name="SimpleLight7" parent="Ground" index="22" instance=ExtResource("11_bmh38")]
+[node name="SimpleLight7" parent="Ground" index="16" instance=ExtResource("11_bmh38")]
 position = Vector2(-894, 1000)
 rotation = -1.57079
 
-[node name="SimpleLight8" parent="Ground" index="23" instance=ExtResource("11_bmh38")]
+[node name="SimpleLight8" parent="Ground" index="17" instance=ExtResource("11_bmh38")]
 position = Vector2(1467, 1178)
 rotation = -1.57079
 
-[node name="SimpleLight18" parent="Ground" index="24" instance=ExtResource("11_bmh38")]
+[node name="SimpleLight18" parent="Ground" index="18" instance=ExtResource("11_bmh38")]
 position = Vector2(-2453, 996)
 rotation = -1.57079
 
-[node name="SimpleLight19" parent="Ground" index="25" instance=ExtResource("11_bmh38")]
+[node name="SimpleLight19" parent="Ground" index="19" instance=ExtResource("11_bmh38")]
 position = Vector2(-2453, 191)
 rotation = -1.57079
 
-[node name="SimpleLight9" parent="Ground" index="26" instance=ExtResource("11_bmh38")]
+[node name="SimpleLight9" parent="Ground" index="20" instance=ExtResource("11_bmh38")]
 position = Vector2(1450, 14)
 rotation = -1.57079
 
-[node name="SimpleLight10" parent="Ground" index="27" instance=ExtResource("11_bmh38")]
+[node name="SimpleLight10" parent="Ground" index="21" instance=ExtResource("11_bmh38")]
 position = Vector2(-1054, 1174)
 rotation = -4.71238
 
-[node name="SimpleLight11" parent="Ground" index="28" instance=ExtResource("11_bmh38")]
+[node name="SimpleLight11" parent="Ground" index="22" instance=ExtResource("11_bmh38")]
 position = Vector2(-1072, 5)
 rotation = -4.71238
 
-[node name="SimpleLight12" parent="Ground" index="29" instance=ExtResource("11_bmh38")]
+[node name="SimpleLight12" parent="Ground" index="23" instance=ExtResource("11_bmh38")]
 position = Vector2(1291, 1006)
 rotation = -4.71238
 
-[node name="SimpleLight14" parent="Ground" index="30" instance=ExtResource("11_bmh38")]
+[node name="SimpleLight14" parent="Ground" index="24" instance=ExtResource("11_bmh38")]
 position = Vector2(193, 2456)
 rotation = -3.14159
 
-[node name="SimpleLight15" parent="Ground" index="31" instance=ExtResource("11_bmh38")]
+[node name="SimpleLight15" parent="Ground" index="25" instance=ExtResource("11_bmh38")]
 position = Vector2(1365, 2456)
 rotation = -3.14159
 
-[node name="SimpleLight16" parent="Ground" index="32" instance=ExtResource("11_bmh38")]
+[node name="SimpleLight16" parent="Ground" index="26" instance=ExtResource("11_bmh38")]
 position = Vector2(-973, 2460)
 rotation = -3.14159
 
-[node name="SimpleLight13" parent="Ground" index="33" instance=ExtResource("11_bmh38")]
+[node name="SimpleLight13" parent="Ground" index="27" instance=ExtResource("11_bmh38")]
 position = Vector2(1288, 198)
 rotation = -4.71238
 
-[node name="SimpleLight17" parent="Ground" index="34" instance=ExtResource("11_bmh38")]
+[node name="SimpleLight17" parent="Ground" index="28" instance=ExtResource("11_bmh38")]
 position = Vector2(2849, 194)
 rotation = -4.71238
 
-[node name="SimpleLight3" parent="Ground" index="35" instance=ExtResource("11_bmh38")]
+[node name="SimpleLight3" parent="Ground" index="29" instance=ExtResource("11_bmh38")]
 position = Vector2(3506, 1082)
 
-[node name="SimpleLight4" parent="Ground" index="36" instance=ExtResource("11_bmh38")]
+[node name="SimpleLight4" parent="Ground" index="30" instance=ExtResource("11_bmh38")]
 position = Vector2(3520, 3229)
 rotation = -3.14159
 
-[node name="SimpleLight5" parent="Ground" index="37" instance=ExtResource("11_bmh38")]
+[node name="SimpleLight5" parent="Ground" index="31" instance=ExtResource("11_bmh38")]
 position = Vector2(4344, 2103)
 rotation = -3.14159
 
-[node name="SimpleLight6" parent="Ground" index="38" instance=ExtResource("11_bmh38")]
+[node name="SimpleLight6" parent="Ground" index="32" instance=ExtResource("11_bmh38")]
 position = Vector2(4339, 2189)
 
-[node name="WallLight" parent="Ground" index="39" instance=ExtResource("12_ju5th")]
+[node name="WallLight" parent="Ground" index="33" instance=ExtResource("12_ju5th")]
 position = Vector2(1177, -3121)
 rotation = 1.57079
 
-[node name="WallLight2" parent="Ground" index="40" instance=ExtResource("12_ju5th")]
+[node name="WallLight2" parent="Ground" index="34" instance=ExtResource("12_ju5th")]
 position = Vector2(1215, -4910)
 rotation = 1.57079
 
-[node name="Drone" parent="." index="2" instance=ExtResource("13_cbl4y")]
+[node name="Toilet" parent="." index="1" instance=ExtResource("4_ff7ve")]
+position = Vector2(4258, 1178)
+
+[node name="Toilet2" parent="." index="2" instance=ExtResource("4_ff7ve")]
+position = Vector2(4256, 2294)
+
+[node name="Box" parent="." index="3" instance=ExtResource("8_bquw6")]
+position = Vector2(4876, 1158)
+
+[node name="Box2" parent="." index="4" instance=ExtResource("8_bquw6")]
+position = Vector2(4878, 2266)
+
+[node name="ItemContainer" parent="." index="5" instance=ExtResource("9_4b1v4")]
+position = Vector2(3309, 3063)
+rotation = 0.0184139
+
+[node name="ItemContainer2" parent="." index="6" instance=ExtResource("9_4b1v4")]
+position = Vector2(3724, 3065)
+rotation = 3.10563
+
+[node name="Drone" parent="." index="8" instance=ExtResource("13_cbl4y")]
 position = Vector2(148, -1528)
 rotation = -3.14159
 
-[node name="Player" parent="." index="3"]
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." index="10"]
+color = Color(0.345098, 0.345098, 0.345098, 1)
+blend_mode = 1
+
+[node name="Player" parent="." index="11"]
 position = Vector2(197, -6487)
 rotation = 1.309
 
@@ -207,16 +211,12 @@ energy = 0.4
 texture = ExtResource("14_ddep1")
 metadata/_edit_lock_ = true
 
-[node name="Gate" parent="." index="4" instance=ExtResource("5_5v7jv")]
+[node name="Gate" parent="." index="12" instance=ExtResource("5_5v7jv")]
 position = Vector2(134, -7340)
 
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." index="5"]
-color = Color(0.345098, 0.345098, 0.345098, 1)
-blend_mode = 1
+[node name="LevelTransition" parent="." index="13" instance=ExtResource("16_wgrk7")]
 
-[node name="LevelTransition" parent="." index="7" instance=ExtResource("16_wgrk7")]
-
-[node name="Item" parent="." index="8" instance=ExtResource("17_6314g")]
+[node name="Item" parent="." index="14" instance=ExtResource("17_6314g")]
 position = Vector2(-379, -5861)
 
 [connection signal="player_entered_inside" from="Gate" to="." method="_on_gate_player_entered_inside"]

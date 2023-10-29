@@ -9,6 +9,10 @@ script = ExtResource("1_pw3if")
 
 [node name="Ground" type="Node2D" parent="."]
 
+[node name="Items" type="Node2D" parent="."]
+
+[node name="Projectiles" type="Node2D" parent="."]
+
 [node name="Player" parent="." instance=ExtResource("3_yqite")]
 position = Vector2(0, 600)
 rotation = -1.5708
@@ -17,10 +21,6 @@ rotation = -1.5708
 zoom = Vector2(0.3, 0.3)
 position_smoothing_enabled = true
 position_smoothing_speed = 8.0
-
-[node name="Items" type="Node2D" parent="."]
-
-[node name="Projectiles" type="Node2D" parent="."]
 
 [node name="UI" parent="." instance=ExtResource("3_8qjxd")]
 
