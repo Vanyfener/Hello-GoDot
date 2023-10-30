@@ -178,4 +178,6 @@ metadata/_edit_lock_ = true
 [node name="Item" parent="." index="8" instance=ExtResource("18_g6r2s")]
 position = Vector2(-740, 275)
 
+[connection signal="player_entered" from="Ground/TileMap/Garage" to="." method="_on_garage_player_entered"]
+[connection signal="player_exited" from="Ground/TileMap/Garage" to="." method="_on_garage_player_exited"]
 [connection signal="player_entered_inside" from="Gate" to="." method="_on_gate_player_entered_inside"]
