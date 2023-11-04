@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://1k53eeufe05c"]
+[gd_scene load_steps=19 format=3 uid="uid://1k53eeufe05c"]
 
 [ext_resource type="PackedScene" uid="uid://b430y3kk4qq8v" path="res://levels/level.tscn" id="1_n1m5t"]
 [ext_resource type="Script" path="res://levels/inside.gd" id="2_f1lpq"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://cq2dgocg6pg1" path="res://objects/wall_light.tscn" id="12_ju5th"]
 [ext_resource type="PackedScene" uid="uid://78mbtt0vk2n1" path="res://enemies/drone.tscn" id="13_cbl4y"]
 [ext_resource type="Texture2D" uid="uid://duy8x5lrf15bp" path="res://assets/graphics/items/orb2.png" id="14_ddep1"]
+[ext_resource type="PackedScene" uid="uid://b2g6psrxnydm6" path="res://enemies/scout.tscn" id="14_g72a7"]
 [ext_resource type="PackedScene" uid="uid://csgh73y3pl1e0" path="res://User Interface/level_transition.tscn" id="16_wgrk7"]
 [ext_resource type="PackedScene" uid="uid://cy00wx4lnxt8i" path="res://items/item.tscn" id="17_6314g"]
 
@@ -190,15 +191,30 @@ rotation = 0.0184139
 position = Vector2(3724, 3065)
 rotation = 3.10563
 
-[node name="Drone" parent="." index="8" instance=ExtResource("13_cbl4y")]
-position = Vector2(148, -1528)
-rotation = -3.14159
-
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." index="10"]
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." index="9"]
 color = Color(0.345098, 0.345098, 0.345098, 1)
 blend_mode = 1
 
-[node name="Player" parent="." index="11"]
+[node name="Drone" parent="Enemies" index="0" instance=ExtResource("13_cbl4y")]
+position = Vector2(148, -1528)
+rotation = -3.14159
+
+[node name="Scout" parent="Enemies" index="1" instance=ExtResource("14_g72a7")]
+position = Vector2(188, -588)
+rotation = -1.57079
+
+[node name="Scout2" parent="Enemies" index="2" instance=ExtResource("14_g72a7")]
+position = Vector2(-925, 571)
+
+[node name="Gate" parent="." index="11" instance=ExtResource("5_5v7jv")]
+position = Vector2(134, -7340)
+
+[node name="LevelTransition" parent="." index="12" instance=ExtResource("16_wgrk7")]
+
+[node name="Item" parent="." index="13" instance=ExtResource("17_6314g")]
+position = Vector2(-379, -5861)
+
+[node name="Player" parent="." index="14"]
 position = Vector2(197, -6487)
 rotation = 1.309
 
@@ -210,13 +226,5 @@ scale = Vector2(4, 4)
 energy = 0.4
 texture = ExtResource("14_ddep1")
 metadata/_edit_lock_ = true
-
-[node name="Gate" parent="." index="12" instance=ExtResource("5_5v7jv")]
-position = Vector2(134, -7340)
-
-[node name="LevelTransition" parent="." index="13" instance=ExtResource("16_wgrk7")]
-
-[node name="Item" parent="." index="14" instance=ExtResource("17_6314g")]
-position = Vector2(-379, -5861)
 
 [connection signal="player_entered_inside" from="Gate" to="." method="_on_gate_player_entered_inside"]

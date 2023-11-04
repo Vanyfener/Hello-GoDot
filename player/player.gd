@@ -19,6 +19,7 @@ func _process(delta):
 		velocity.y = lerp(velocity.y, direction.x * player_speed, delta * 8.0)
 	
 	move_and_slide()
+	Globals.player_position = global_position
 	
 	#rotation
 	rotation = get_smooth_mouse_rotation(delta, player_rotation_speed)

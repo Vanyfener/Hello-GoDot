@@ -4,6 +4,8 @@ signal update_laser_ammo_amount()
 signal update_grenade_amount()
 signal update_health_amount()
 
+var player_position: Vector2
+
 var laser_ammo_amount = 60:
 	get:
 		return laser_ammo_amount
