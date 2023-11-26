@@ -42,6 +42,12 @@ func _process(delta):
 		secondary_delay = false
 		$SecondaryDelay.start()
 		grenade.emit(grenade_throw_point, player_direction)
+
+
+func hit():
+	Globals.health -= 10
+
+
 		
 func _on_primary_delay_timeout():
 	primary_delay = true

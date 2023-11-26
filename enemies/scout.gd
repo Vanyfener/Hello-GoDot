@@ -7,11 +7,12 @@ signal laser(pos, dir)
 var is_player_nearby: bool = false
 var is_able_to_shoot: bool = true
 var is_right_gun: bool = false
+var health: int = 30
+var is_able_to_take_damage: bool = true
 
 
 func _process(delta):
 	if is_player_nearby:
-		
 		#scout rotation
 		rotation = get_smooth_enemy_rotation(delta, scout_rotation_speed)
 		
@@ -33,6 +34,15 @@ func get_smooth_enemy_rotation(dlt, rot_speed) -> float:
 	var rot = global_rotation
 	return lerp_angle(rot, ang, rot_speed * dlt)
 
+func hit():
+	if is_able_to_take_damage:
+		print("scout was damaged!")
+		health -= 10
+		if health <= 0:
+			queue_free()
+		is_able_to_take_damage = false
+		$AbleToTakeDamageTimer.start()
+		$ScoutImage.material.set_shader_parameter("progress", 1)
 
 func _on_attack_area_body_entered(_body):
 	is_player_nearby = true
@@ -44,3 +54,8 @@ func _on_attack_area_body_exited(_body):
 
 func _on_laser_cooldown_timer_timeout():
 	is_able_to_shoot = true
+
+
+func _on_able_to_take_damage_timer_timeout():
+	is_able_to_take_damage = true
+	$ScoutImage.material.set_shader_parameter("progress", 0)
